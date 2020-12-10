@@ -5,13 +5,23 @@
 
 /* Import */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /* Global */
 body {
 	font-family: 'Open Sans', sans-serif;
 }
 img {
 	max-width: 100%;
+}
+h2 {
+	font-size: 34px;
+	font-weight: 600;
+}
+p.start {
+	font-size: 24px;
+	font-weight: 200;
+	max-width: 820px;
+	margin-top: 20px;
 }
 
 /* Bootstrap */
@@ -118,9 +128,217 @@ nav ul li a:hover {
 	width: 43%;
 }
 
+.masonry-item {
+	display: flex;
+	align-items: flex-end;
+}
+#masonry img {
+	width: 100%;
+	-webkit-box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
+}
 #masonry {
 	width: 100%;
 	flex-direction: row;
-	flex-wrap: wrap;
 	display: flex;
+}
+#left-mansory {
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+#right-mansory {
+	width: 30%;
+	justify-content: center;
+}
+#head {
+	width: 33%;
+}
+#white-mercedes {
+	width: 63%;
+}
+#black-mercedes {
+	width: 100%;
+	margin-top: 53px;
+    padding-left: 8px;
+}
+#blue {
+	width: 60%;
+	margin-top: 20px;
+}
+#shoe {
+	width: 35%;
+	display: flex;
+	align-items: flex-start;
+	margin-top: 20px;
+}
+
+.animated-icon1, .animated-icon2, .animated-icon3 {
+	width: 24px;
+	height: 20px;
+	position: relative;
+	margin: 0px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+.navbar-toggler {
+	outline: none!important;
+	border: none!important;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.animated-icon1 span, .animated-icon2 span, .animated-icon3 span {
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	border-radius: 9px;
+	opacity: 1;
+	right: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+.navbar-toggler .menu-text {
+	font-weight: 200;
+	font-size: 14px;
+	margin-right: 15px;
+	text-transform: uppercase;
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+}
+.animated-icon1 span {
+	background: black;
+}
+
+.animated-icon1 span:nth-child(1) {
+	top: 0px;
+	max-width: 22px;
+}
+
+.animated-icon1 span:nth-child(2) {
+	top: 10px;
+	max-width: 17px;
+}
+
+.animated-icon1 span:nth-child(3) {
+	top: 20px;
+}
+.box {
+	padding: 5px 10px;
+	background: black;
+	position: #1d1d1d;
+	z-index: 500;
+	display: none;
+	color: #d1d1d1;
+	align-items: center;
+	position: absolute;
+}
+
+
+/* About */
+.about {
+	padding: 70px 0px;
+}
+.about__row {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-top: 50px;
+}
+.about .info-box {
+	width: 100%;
+	max-width: 450px;
+	padding: 50px 40px;
+	background: white;
+	-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+	margin-bottom: 40px;
+	z-index: 5;
+}
+.about .decorate-box {
+	height: 157px;
+	width: 500px;
+	padding-right: 100px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: -1;
+	justify-content: flex-end;
+	right: -135px;
+	bottom: 50px;
+	-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+}
+.about .item__left {
+	position: relative;
+}
+.about .info-box::after {
+	content: url(../images/tecky-pozadi.png);
+	position: absolute;
+	left: -100px;
+	bottom: -100px;
+	z-index: -1;
+}
+.info-box h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+.info-box p {
+	font-size: 15px;
+}
+.info-box ul {
+	padding: 0;
+}
+
+.info-box ul li {
+	list-style: none;
+	position: relative;
+	padding-left: 50px;
+	margin-top: 40px;
+}
+.info-box ul li:first-child {
+	margin: 0;
+}
+.info-box ul li::before {
+	content: "";
+	border-radius: 50px;
+	width: 13px;
+	height: 13px;/* Add content: \2022 is the CSS Code/unicode for a bullet */
+  background: #EC5959; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+	position: absolute;
+	left: 0;
+	top: 4px;
+}
+.black-button-shadow {
+	padding: 15px 30px;
+	background: #1D1D1D;
+	color: white;
+	position: absolute;
+	bottom: -25px;
+	right: 20%;
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(29, 29, 29, 0.3);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(29, 29, 29, 0.3);
+  box-shadow: 5px 5px 0px 0px rgba(29, 29, 29, 0.3);
+	font-weight: 600;
+  transition: all 0.5s ease;
 }
