@@ -23,9 +23,52 @@ $(document).ready(function(){
     }
   });
 
-  $(window).load(function() {
-  	setTimeout(function(){
-  			$("#preloader").css("opacity", "0");
-  	}, 2000)
+  orderOfitems = () => {
+    let counter = 0;
+    let prevSame = false;
+    $(".project__item").each(function(){
+      $(this).css("order", counter);
+      if (!$(this).hasClass("image")) {
+        if (prevSame) {
+          $(this).css("order", counter+5);
+        }
+        prevSame = true;
+      } else {
+        prevSame = false;
+      }
+      counter++;
+    })
+  }
+  let width = $(window).width();
+  if (width <= 1200) {
+    orderOfitems();
+  } else {
+    let counter = 0;
+    $(".project__item").each(function(){
+      $(this).css("order", counter);
+      counter++;
+    })
+  }
+
+  $(window).resize(function(){
+    let width = $(window).width();
+    if (width <= 1200) {
+      orderOfitems();
+    } else {
+      let counter = 0;
+      $(".project__item").each(function(){
+        $(this).css("order", counter);
+        counter++;
+      })
+    }
   });
+
+
+
 });
+/*$(window).load(function() {
+  setTimeout(function(){
+      $("#preloader").css("opacity", "0").css("z-index","-1");
+      $("body").css("overflow", "scroll");
+  }, 2000)
+});*/
