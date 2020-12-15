@@ -33,10 +33,16 @@ p.start {
 }
 
 /* Bootstrap */
+.container-fluid{
+ max-width: 1920px;
+}
 @media (min-width: 1340px) {
 		.container {
 	    max-width: 1300px;
 		}
+}
+.container-header {
+	margin: auto;
 }
 @media (min-width: 1440px) {
 	.container-header {
@@ -161,11 +167,11 @@ nav ul li a:hover {
 	}
 }
 /* Start */
-.start .start-content {
+.start {
 	text-align: center;
 	margin-top: 80px;
 }
-.start .margin {
+.start.margin {
 	margin-top: 140px;
 }
 .start h1 {
@@ -353,7 +359,7 @@ box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
 	position: absolute;
 }
 @media (max-width: 991px) {
-	.start .start-content {
+	.start {
 		margin-top: 120px;
 	}
 }
@@ -788,4 +794,95 @@ footer {
 	.scrollTop {
 		display: block;
 	}
+}
+/* SUBPAGE */
+.work__content {
+	display: flex;
+	flex-direction: row;
+}
+.work h1 {
+	font-size: 61px;
+	font-weight: bold;
+	color: black;
+	font-style: bold;
+	margin: 0;
+	margin-bottom: 30px;
+}
+.work p {
+	color: #7A7A7A;
+	font-size: 16px;
+	margin-bottom: 35px;
+}
+.work__photos {
+	width: 60%;
+}
+.work__text {
+	width: 40%;
+	position: relative;
+}
+.work__text--inner {
+	width: 100%;
+	max-width: 550px;
+	margin: auto;
+	position: sticky;
+	top: 100px;
+	left: 0;
+	text-align: left;
+}
+.work__text--inner table {
+	margin: 30px 0px;
+}
+.work__text--inner table td {
+	font-size: 15px;
+	color: #818181;
+}
+.work__text--inner table td:first-child {
+	color: #1D1D1D;
+	font-weight: 700;
+	font-style: bold;
+	padding-right: 50px;
+}
+.work__text--inner table  {
+	line-height: 2.5;
+}
+.icon__wrap--share a:hover {
+	text-decoration: none;
+}
+.icon__wrap--share a {
+	padding: 5px;
+}
+.slider-page {
+	background: #F8F8F8;
+	padding: 35px 0px;
+}
+.slider-page__content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.slider-page p {
+	margin: 0;
+}
+.slider-page p, .slider-page a {
+	text-transform: uppercase;
+	font-style: bold;
+	font-weight: 700;
+	color: black;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+}
+.slider-page a.next span {
+	margin-right: 25px;
+}
+
+.slider-page a.prev span {
+	margin-left: 25px;
+}
+.slider__content {
+	max-width: 1680px;
+	margin: auto;
+}
+.slider {
+	padding: 100px;
 }

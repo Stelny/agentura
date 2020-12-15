@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  AOS.init();
+
   $(".masonry-item img").mousemove(function(e){
     $(this).siblings(".box").css("display", "flex");
     $(".box").css('top',e.pageY+15);
@@ -10,7 +13,7 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     var sticky = $('header');
-    var margin = $('.start-content');
+    var margin = $('.start');
     var scroll = $(window).scrollTop();
 
     if (scroll >= 1) {
@@ -67,6 +70,28 @@ $(document).ready(function(){
       })
     }
   });
+
+
+  const o = 8;
+  $(".button-more").attr("data-id", 13);
+  $('.project__item.image').each(function(index){
+    if (index >= 14) {
+      $(this).css("display", "none");
+    }
+
+  })
+  $(".button-more").click(function(event){
+    event.preventDefault();
+    const l = $('.project__item.image').length;
+
+    let data =   $(".button-more").attr("data-id");
+    $('.project__item.image').each(function(index){
+      if (index <= parseInt(data)+o) {
+        $(this).css("display", "flex");
+        $(".button-more").attr("data-id", parseInt(data)+o);
+      }
+    })
+  })
 
 
 
