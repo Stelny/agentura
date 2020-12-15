@@ -14,6 +14,7 @@
 /* Import */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 /* Global */
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -884,5 +885,44 @@ footer {
 	margin: auto;
 }
 .slider {
-	padding: 100px;
+	padding: 60px 0px;
+}
+.work {
+	padding-bottom: 50px;
+}
+.work__slider--item {
+	-webkit-box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
+		margin: 25px 0px;
+}
+.slider__content {
+	display: flex;
+	justify-content: space-between;
+}
+.work-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.work-nav img {
+	width: 13px;
+}
+.work__slider {
+	max-width: 1450px;
+	width: 90%!important;
+}
+.slider__heading {
+	text-align: center;
+}
+.slider__heading h2 {
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	color: black;
+}
+@media (max-width: 991px) {
+	.slider {
+		display: none;
+	}
 }

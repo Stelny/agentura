@@ -10,6 +10,27 @@ $(document).ready(function(){
   $(".masonry-item img").mouseleave(function(e){
     $(this).siblings(".box").css("display", "none");
   });
+  var owl = $('.work__slider');
+  owl.owlCarousel({
+
+    margin:10,
+    nav:true,
+    nav:false,
+    dots:false,
+    responsive:{
+        991:{
+            items:3
+        }
+    }
+})
+$('.work-nav .next').click(function(e) {
+    e.preventDefault();
+    owl.trigger('next.owl.carousel');
+})
+$('.work-nav .prev').click(function(e) {
+    e.preventDefault();
+    owl.trigger('prev.owl.carousel');
+})
 
   $(window).scroll(function(){
     var sticky = $('header');
