@@ -820,6 +820,7 @@ footer {
 .work__text {
 	width: 40%;
 	position: relative;
+	padding-left: 40px;
 }
 .work__text--inner {
 	width: 100%;
