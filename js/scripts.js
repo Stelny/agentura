@@ -22,7 +22,12 @@ $(document).ready(function(){
       margin.removeClass("margin");
     }
   });
-
+  $(".scrollTop").click(function(e){
+    e.preventDefault();
+      $('html, body').animate({
+          scrollTop: $("body").offset().top
+      }, 1000);
+    })
   orderOfitems = () => {
     let counter = 0;
     let prevSame = false;
