@@ -32,6 +32,12 @@ p.start {
 	max-width: 820px;
 	margin-top: 20px;
 }
+.desc-small {
+	font-size: 24px;
+	font-weight: 200;
+	max-width: 820px;
+	margin-top: 20px;
+}
 
 /* Bootstrap */
 .container-fluid{
@@ -427,8 +433,8 @@ box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
 .about .info-box::after {
 	content: url(../images/tecky-pozadi.png);
 	position: absolute;
-	left: -100px;
-	bottom: -100px;
+	left: -70px;
+    bottom: -80px;
 	z-index: -1;
 }
 .info-box h3 {
@@ -926,4 +932,59 @@ footer {
 	.slider {
 		display: none;
 	}
+	.work__content {
+		display: flex;
+		flex-direction: column;
+		padding: 0 30px;
+	}
+	.work__text {
+		order: 1;
+		width: 100%;
+		padding: 0;
+	}
+	.work__text--inner {
+		max-width: unset;
+		padding-bottom: 30px;
+	}
+	.work__photos {
+		order: 2;
+		width: 100%;
+	}
+	.slider-page {
+		padding: 35px;
+	}
+}
+
+/* contact */
+
+.contact {
+ padding: 100px 0 200px 0;
+}
+.map {
+ height: 400px;
+}
+.map iframe {
+ width: 100%;
+ height: 400px;
+}
+.contact__content p {
+ font-size: 15px;
+ color: black;
+ margin-top: 10px;
+}
+.contact__content {
+	max-width: 500px;
+	margin: auto;
+}
+.contact__part {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.contact__part a {
+	color: black;
+	line-height: 2.5;
+	font-weight: 600;
 }
