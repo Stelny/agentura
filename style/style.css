@@ -18,6 +18,7 @@
 /* Global */
 body {
 	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
 }
 img {
 	max-width: 100%;
@@ -78,16 +79,19 @@ p.start {
 
 
 /* Header */
-/*#preloader {
+#preloader {
 	width: 100%;
 	z-index: 1000;
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
-	background: black;
+	background: white;
 	transition: all 0.75s ease;
-}*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 header {
 	z-index: 999;
 }
@@ -315,7 +319,7 @@ box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
 	}
 	.masonry-item {
 		width: 90%!important;
-		margin: 10px 0px!important;
+		margin: 10px auto!important;
 	}
 	#masonry {
 		flex-direction: column;

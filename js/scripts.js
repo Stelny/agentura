@@ -113,13 +113,10 @@ $('.work-nav .prev').click(function(e) {
       }
     })
   })
-
-
-
-});
-/*$(window).load(function() {
   setTimeout(function(){
       $("#preloader").css("opacity", "0").css("z-index","-1");
       $("body").css("overflow", "scroll");
   }, 2000)
-});*/
+
+
+});
