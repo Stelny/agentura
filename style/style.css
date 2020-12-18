@@ -26,6 +26,20 @@ h2 {
 	font-size: 34px;
 	font-weight: 600;
 }
+p b {
+	font-weight: 600;
+}
+::selection {
+	background: #1D1D1D;
+	color: white;
+}
+.start-content {
+	display: flex;
+	flex-direction: column;
+}
+.start-content img {
+	width: 366px;
+}
 p.start {
 	font-size: 24px;
 	font-weight: 200;
@@ -174,6 +188,7 @@ nav ul li a:hover {
 		margin-top: 30px;
 	}
 }
+
 /* Start */
 .start {
 	text-align: center;
@@ -228,6 +243,24 @@ nav ul li a:hover {
 	width: 43%;
 }
 
+@media (max-width: 991px) {
+	.start h1 {
+		font-size: 50px;
+		order: 1;
+	}
+	.start-content .start-image {
+		order: 2;
+		margin-top: 20px;
+	}
+	.hp-banner {
+		margin-top: 60px;
+	}
+}
+@media (max-width: 600px) {
+	.start h1 {
+		font-size: 35px;
+	}
+}
 .masonry-item {
 	display: flex;
 	align-items: flex-end;
@@ -242,6 +275,7 @@ box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
 	width: 100%;
 	flex-direction: row;
 	display: flex;
+	padding: 0 20px;
 }
 #left-mansory {
 	width: 70%;
@@ -276,8 +310,11 @@ box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
 }
 
 @media (max-width: 600px) {
+	#masonry {
+		padding: 0;
+	}
 	.masonry-item {
-		width: 100%!important;
+		width: 90%!important;
 		margin: 10px 0px!important;
 	}
 	#masonry {
@@ -602,9 +639,9 @@ box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.75);
 	display: flex;
 	justify-content: center;
 	padding: 40px;
-	-webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.15);
-	-moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.15);
- 	box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0px 0px 99px 0px rgba(0,0,0,0.08);
+	-moz-box-shadow: 0px 0px 99px 0px rgba(0,0,0,0.08);
+ 	box-shadow: 0px 0px 99px 0px rgba(0,0,0,0.08);
 	flex-direction: column;
 	margin: 20px 15px;
 }
@@ -779,6 +816,9 @@ footer {
 	.social__text {
 		display: none;
 	}
+	.footer__content p {
+		font-size: 13px;
+	}
 	.footer__content {
 		flex-direction: column;
 		text-align: center;
@@ -848,10 +888,14 @@ margin: auto;
 	font-size: 15px;
 	color: #818181;
 }
+.work__text--inner table td {
+	font-size: 13px;
+}
 .work__text--inner table td:first-child {
 	color: #1D1D1D;
 	font-weight: 700;
 	font-style: bold;
+	font-size: 15px;
 	padding-right: 50px;
 }
 .work__text--inner table  {
@@ -1039,6 +1083,15 @@ margin: auto;
 	.slider-page {
 		padding: 35px;
 	}
+	.work h1 {
+		font-size: 35px;
+	}
+	.work p {
+		font-size: 15px;
+	}
+	.work__text--inner table td:first-child {
+		padding-right: 25px;
+	}
 }
 @media (max-width: 991px) {
 	.slider-page {
@@ -1056,6 +1109,9 @@ margin: auto;
 	}
 	.slider-page a.next span {
 		margin-right: 10px;
+	}
+	.masonry-item .box {
+		display: none!important;
 	}
 }
 
